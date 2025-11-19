@@ -75,16 +75,6 @@ Valida se o membro existe, está ativo e não excedeu o limite.
 **loans → books/members**  
 Atualiza quantidade de cópias e empréstimos ativos.
 
-
-## 📝 Fluxo Simplificado do Empréstimo
-
-1. `INSERT INTO Loans` cria o empréstimo no loans-service.  
-2. O loans-service chama:  
-   - **books-service** → reduz 1 cópia  
-   - **members-service** → aumenta empréstimos ativos (opcional)  
-3. Resultado: livro com menos cópias e membro com empréstimo ativo registrado.
-
-
 ## ▶️ 5. Execução dos Microsserviços
 
 Para rodar um microsserviço: (terminar tópico)
